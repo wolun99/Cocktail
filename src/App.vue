@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+	<div>
+		<nav>
+			<div class="inner">
+				<router-link to="/" class="main_logo">COCKTAIL</router-link>
+				<div class="menu">
+					<router-link to="/">Name</router-link>
+					<router-link to="/random">Random Cocktail</router-link>
+				</div>
+			</div>
+		</nav>
+		<div class="inner">
+			<SearchBar></SearchBar>
+			<router-view></router-view>
+		</div>
+	</div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import SearchBar from '@/components/SearchBar.vue';
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+	name: 'App',
+	components: {
+		SearchBar,
+	},
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/css/main.css';
 </style>
