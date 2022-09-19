@@ -2,9 +2,11 @@
 	<div>
 		<nav>
 			<div class="inner">
-				<router-link to="/" class="main_logo">COCKTAIL</router-link>
+				<router-link to="/" class="main_logo" @click="searchMain()"
+					>COCKTAIL</router-link
+				>
 				<div class="menu">
-					<router-link to="/">Name</router-link>
+					<router-link to="/" @click="searchMain()">Name</router-link>
 					<router-link to="/random">Random Cocktail</router-link>
 				</div>
 			</div>
@@ -22,6 +24,11 @@ export default {
 	name: 'App',
 	components: {
 		SearchBar,
+	},
+	methods: {
+		searchMain() {
+			this.$store.commit('getSearchWord', '');
+		},
 	},
 };
 </script>

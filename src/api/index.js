@@ -10,4 +10,8 @@ function detailGet(detail) {
 	return axios.get(url + 'lookup.php?i=' + detail);
 }
 
-export { listGet, detailGet };
+function getRandom() {
+	return axios.get(url + 'random.php');
+}
+
+export { listGet, detailGet, getRandom };

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="cardDiv">
 		<div class="cardWrap" v-for="list in lists" :key="list">
 			<img :src="list.strDrinkThumb" alt="" />
 			<h4>{{ list.strDrink }}</h4>
@@ -55,6 +55,7 @@ export default {
 		},
 	},
 	mounted() {
+		this.searchList();
 		this.getList();
 	},
 };

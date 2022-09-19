@@ -1,7 +1,9 @@
 <template>
 	<div class="search_bar">
-		<input type="text" v-model="search" />
-		<button @click="SearchList()">Search</button>
+		<div class="input_wrap">
+			<input type="text" v-model="search" />
+			<button @click="SearchList()">Search</button>
+		</div>
 	</div>
 </template>
 
@@ -15,6 +17,11 @@ export default {
 	methods: {
 		SearchList() {
 			this.$store.commit('getSearchWord', this.search);
+			this.$router.push('/');
+			this.searchInit();
+		},
+		searchInit() {
+			this.search = '';
 		},
 	},
 };
