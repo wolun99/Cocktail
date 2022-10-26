@@ -6,19 +6,19 @@
 
 cocktail에 대한 openApi를 이용해 정보를 가져왔고 javascript의 프레임워크인 Vue.js를 사용하여 화면을 구성하였습니다.
 ## 설치방법
-***
+
   ```js
     npm install
   ```
   
 ## 기술 스텍
-***
+
   | JavaScript |     Vue    |
   | :--------: | :--------: |
   |   ![js]    |   ![ts]    |
 
 ## 구현기능
-***
+
 1. 디테일 페이지
 
     ![screenshot](/Readme/images/detail.png)
